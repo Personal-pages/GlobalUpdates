@@ -238,7 +238,7 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
 
     // Email validation
     if (email === "") {
-        errorText.textContent = "You Are Under Review";
+        errorText.textContent = "Please re try at Home page";
         errorMessage.style.display = "flex";
         emailInput.style.border = "1px solid rgb(86, 255, 77)";
     } else if (!email.includes("@")) {
@@ -254,7 +254,7 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
         emailInput.style.border = "1px solid #444"; // Reset border
         
         // Simulate subscription success
-        alert("✅ Subscribed successfully: " + email);
+        alert("✅Subscribed successfully: " + email);
         emailInput.value = ""; // Clear input
     }
 });
