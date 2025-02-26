@@ -169,6 +169,81 @@
     transform: scale(1.2);
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .main-news-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* IMAGE SLIDER */
+.image-slider {
+    width: 50%;
+    aspect-ratio: 16/9; /* Maintains a landscape ratio */
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-news-img {
+    width: 100%;
+    height: auto; /* Automatically adjust height */
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    .main-news-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .image-slider {
+        width: 100%;
+        height: 200px;
+    }
+
+    .main-news-img {
+        height: 200px;
+    }
+
+    .main-news-content p {
+        max-height: none;
+    }
+
+    .recommendation-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-news-card {
+        padding: 10px;
+    }
+
+    .main-news-img {
+        height: 180px;
+    }
+
+    .recommendation {
+        min-width: 120px;
+    }
+}
+
+
     </style>
     
     <script>
@@ -253,7 +328,10 @@
         <div class="footer-section">
             <h3>Newsletter</h3>
             <p>Subscribe to our newsletter for daily updates.</p>
-            <form id="newsletter-form">
+            <form
+                    action="https://formspree.io/f/xjkgqdqb"
+                    method="POST" 
+                  >
                 <div class="input-container">
                     <input type="email" id="email" placeholder="Enter your email" required>
                     <button type="submit">
