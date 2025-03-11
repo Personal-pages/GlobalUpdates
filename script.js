@@ -1,7 +1,7 @@
 // Auto-refresh Breaking News Ticker
 document.addEventListener("DOMContentLoaded", function () {
     const ticker = document.querySelector(".breaking-news marquee");
-    ticker.innerHTML = "🚨 Breaking News: New Updates Every Minute! Stay Tuned 🚨";
+    ticker.innerHTML = "Breaking News: New Updates Every Minute! Stay Tuned ";
 });
 document.getElementById('contact-link').addEventListener('click', function(event) {
     event.preventDefault();  // Prevent the default link behavior
@@ -256,5 +256,190 @@ document.getElementById("newsletter-form").addEventListener("submit", function(e
         // Simulate subscription success
         alert("✅Subscribed successfully: " + email);
         emailInput.value = ""; // Clear input
+    }
+});
+
+// mode 
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const themeIcon = document.getElementById("theme-icon");
+
+    if (localStorage.getItem("theme") === "dark") {
+        enableDarkMode();
+    } else {
+        enableLightMode();
+    }
+
+    window.toggleTheme = function () {
+        if (body.classList.contains("dark-mode")) {
+            enableLightMode();
+        } else {
+            enableDarkMode();
+        }
+    };
+
+    function enableLightMode() {
+        body.classList.remove("dark-mode");
+        themeIcon.textContent = "dark_mode";
+
+        document.querySelectorAll("*").forEach(el => {
+            const style = window.getComputedStyle(el);
+            const bgColor = rgbToHex(style.backgroundColor);
+            const textColor = rgbToHex(style.color);
+
+            // 🎨 **Light Mode Colors (RGBA)**
+            const lightModeColors = {
+                background: "rgba(248, 249, 250, 1)",    
+                headerBg: "rgba(252, 252, 252, 0.95)",    
+                headerText: "rgba(34, 34, 34, 1)",
+                navBg: "rgba(242, 242, 242, 0.95)",     
+                navText: "rgba(51, 51, 51, 1)",
+                sidebarBg: "rgba(245, 245, 245, 1)",
+                sidebarText: "rgb(38, 38, 38)",
+                footerBg: "rgba(237, 237, 237, 1)",
+                footerText: "rgba(17, 17, 17, 1)",
+                headingText: "rgba(34, 34, 34, 1)",
+                paragraphText: "rgba(51, 51, 51, 1)",
+                linkText: "rgba(0, 123, 255, 1)",
+                cardBg: "rgba(239, 239, 239, 0.95)",    
+                cardText: "rgba(34, 34, 34, 1)",
+                inputBg: "rgba(255, 255, 255, 1)",
+                inputText: "rgba(34, 34, 34, 1)",
+                inputBorder: "rgba(208, 208, 208, 1)",
+                buttonBg: "rgba(240, 106, 40, 0.94)",
+                buttonText: "rgba(255, 255, 255, 1)",
+                iconColor: "rgba(34, 34, 34, 1)",
+                overlayBg: "rgba(0, 0, 0, 0.1)",
+                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.08)"
+            };
+
+            // **Set Comfortable Background Instead of Plain White**
+            if (bgColor !== "transparent" && isDark(bgColor)) {
+                el.style.backgroundColor = lightModeColors.background;
+            }
+
+         
+            
+            // **Cards & Boxes with Depth**
+            if (el.classList.contains("news-card") || el.classList.contains("weather-box")) {
+                el.style.backgroundColor = lightModeColors.cardBg;
+                el.style.boxShadow = lightModeColors.boxShadow;
+                el.style.borderRadius = "10px";
+            }
+
+            // **Fix Email Icon & Breaking News Runner Visibility**
+            if (el.classList.contains("email-icon")) {
+                el.style.color = lightModeColors.iconColor;
+            }
+
+            // **Make Text More Readable**
+            if (el.tagName.startsWith("H")) {
+                el.style.color = lightModeColors.headingText;
+            } else if (textColor === "#ffffff") {
+                el.style.color = lightModeColors.paragraphText;
+            }
+
+            // **Inputs & Forms**
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.style.backgroundColor = lightModeColors.inputBg;
+                el.style.color = lightModeColors.inputText;
+                el.style.border = `1px solid ${lightModeColors.inputBorder}`;
+            }
+
+            // **Fix Placeholder Color for Email Fields**
+            if (el.tagName === "INPUT" && el.type === "email") {
+                el.style.color = lightModeColors.inputText;
+                el.style.border = `1px solid ${lightModeColors.inputBorder}`;
+                el.placeholder = el.placeholder;
+                el.style.opacity = "1";
+            }
+
+            // **Buttons**
+            if (el.tagName === "BUTTON") {
+                el.style.backgroundColor = lightModeColors.buttonBg;
+                el.style.color = lightModeColors.buttonText;
+            }
+
+            // **Footer**
+            if (el.tagName === "FOOTER") {
+                el.style.backgroundColor = lightModeColors.footerBg;
+                el.style.color = lightModeColors.footerText;
+            }
+        });
+
+        localStorage.setItem("theme", "light");
+    }
+
+    function enableDarkMode() {
+        body.classList.add("dark-mode");
+        themeIcon.textContent = "light_mode";
+
+        document.querySelectorAll("*").forEach(el => {
+            el.style.backgroundColor = "";
+            el.style.color = "";
+            el.style.backgroundImage = "";
+            el.style.boxShadow = "";
+        });
+
+        localStorage.setItem("theme", "dark");
+    }
+
+    // 🔍 **Check if Color is Dark**
+    function isDark(hex) {
+        if (!hex.startsWith("#")) return false;
+        const [r, g, b] = hexToRgb(hex);
+        return (r + g + b) / 3 < 80;
+    }
+
+    // 🎨 **Convert RGB to HEX**
+    function rgbToHex(rgb) {
+        if (!rgb.includes("rgb")) return rgb.toLowerCase();
+        const [r, g, b] = rgb.match(/\d+/g).map(Number);
+        return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+    }
+
+    // 🎨 **Convert HEX to RGB**
+    function hexToRgb(hex) {
+        const bigint = parseInt(hex.slice(1), 16);
+        return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
+    }
+});
+
+document.addEventListener("click", function (e) {
+    // Ensure clicks are detected everywhere
+    if (e.target.tagName === "BUTTON" || e.target.tagName === "A" || e.target.tagName === "INPUT") return;
+
+    for (let i = 0; i < 10; i++) { // Creates multiple shapes
+        const shape = document.createElement("div");
+        shape.className = "magic-shape";
+
+        const x = e.clientX + (Math.random() * 60 - 30);
+        const y = e.clientY + (Math.random() * 60 - 30);
+
+        const size = Math.random() * 15 + 5;
+        const rotate = Math.random() * 360;
+
+        shape.style.position = "fixed"; // Makes sure it stays on top
+        shape.style.left = `${x}px`;
+        shape.style.top = `${y}px`;
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
+        shape.style.transform = `rotate(${rotate}deg)`;
+
+        // Random color selection
+        const lightColors = ["#ff4757", "#1e90ff", "#2ed573", "#fffa65", "#e84393"];
+        const darkColors = ["#ff6b81", "#74b9ff", "#55efc4", "#fdcb6e", "#a29bfe"];
+        const isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        shape.style.backgroundColor = isDarkMode ? darkColors[Math.floor(Math.random() * darkColors.length)] : lightColors[Math.floor(Math.random() * lightColors.length)];
+
+        // Random shape selection
+        const shapes = ["star", "circle", "heart", "diamond"];
+        shape.dataset.shape = shapes[Math.floor(Math.random() * shapes.length)];
+
+        document.body.appendChild(shape);
+
+        setTimeout(() => {
+            shape.remove();
+        }, 1200);
     }
 });

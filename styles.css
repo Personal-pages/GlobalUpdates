@@ -12,7 +12,18 @@ body {
     background-color: #181818; /* Dark Background */
     
 }
-
+/* THEME TOGGLE BUTTON */
+.theme-switcher {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
 /* HEADER */
 
 header, .nav-bar {
@@ -34,7 +45,7 @@ header {
 .nav-bar {
     background-color: #1A1A1A; /* Charcoal Grey */
     padding: 12px 20px;
-    border-bottom: 2px solid #FF9800; /* Orange border */
+    border-bottom: 3px solid #ff6200; /* Orange border */
     top: 60px; /* Starts right below the header */
     z-index: 9;
 }
@@ -78,7 +89,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FF9800; /* Orange Hover */
+    color: #ff7300; /* Orange Hover */
 }
 
 /* Navbar */
@@ -121,7 +132,7 @@ nav ul li a:hover {
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background-color: #FF9800;
+    background-color: #ff7300;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
 }
@@ -132,7 +143,7 @@ nav ul li a:hover {
 
 .nav-bar ul li a:hover::after {
     width: 100%;
-    box-shadow: 0px 0px 8px #FF9800;
+    box-shadow: 0px 0px 8px #ff7300;
 }
 /* Hover effect for anchor links inside nav */
 nav a:hover {
@@ -195,7 +206,7 @@ main {
 }
 
 .news-main h2 {
-    color: gold;
+    color: rgb(255, 128, 0);
 }
 /* CATEGORIES SECTION STYLING */
 .categories-container {
@@ -267,7 +278,7 @@ footer {
 }
 
 .footer-section h3 {
-    color: #ff9800;
+    color: #ff7700;
     font-size: 18px;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -299,7 +310,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #ff9800;
+    color: #ff6f00;
     text-decoration: underline;
 }
 
@@ -378,7 +389,7 @@ footer {
 .input-container button {
     padding: 8px 10px;
     border: none;
-    background: #ff9800;
+    background: #ff7300;
     color: white;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
@@ -389,7 +400,7 @@ footer {
 
 /* Hover Effect */
 .input-container button:hover {
-    background: #e68900;
+    background: #e65c00;
     transform: scale(1.02);
 }
 
@@ -403,7 +414,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #ff9100;
+    color: #ff6f00;
     font-size: 12px;
     font-weight: 600;
     margin-top: 5px;
@@ -418,7 +429,7 @@ footer {
 /* Error Icon */
 .error-icon {
     font-size: 16px;
-    color: #fc9117;
+    color: #fc8617;
 }
 
 /* Footer Bottom */
@@ -435,7 +446,7 @@ footer {
 
     bottom: 10;
     font-family: 'Poppins', sans-serif;
-    border-top: 1px solid #ff9800; /* Vibrant orange accent border */
+    border-top: 1px solid #ff6f00; /* Vibrant orange accent border */
     box-shadow: 0px -3px 10px rgba(255, 183, 48, 0); /* Soft orange glow effect */
 }
 
@@ -446,14 +457,14 @@ footer {
 }
 
 .footer-bottom a {
-    color: #ff9800; /* Warm orange-gold for links */
+    color: #ff6200; /* Warm orange-gold for links */
     text-decoration: none;
     font-weight: 350;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-bottom a:hover {
-    color: #ff9f1a; /* Lighter orange on hover */
+    color: #ff6e1a; /* Lighter orange on hover */
     text-shadow: 0 0 10px rgba(255, 166, 0, 0.507); /* Glowing orange effect */
 }
 /* end */
@@ -595,7 +606,7 @@ body {
 .search-icon {
     cursor: pointer;
     font-size: 32px;
-    color: #ff9800;
+    color: #ff7b00;
 }
 
 /* Weather Details */
@@ -607,7 +618,7 @@ body {
 }
 
 .weather-box {
-    background: #333;
+    /* background: #333; */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
@@ -826,5 +837,86 @@ canvas {
 
     .breaking-news {
         margin-top: 140px;
+    }
+    #theme-icon{
+        position: absolute;
+        top: 25px;
+        z-index: 9;
+    }
+}
+#theme-icon{
+    position: absolute;
+    top: 20px;
+    z-index: 9;
+}
+
+body:not(.dark-mode) .material-icons,  
+body:not(.dark-mode) .result,  
+body:not(.dark-mode) .runner,
+body:not(.dark-mode) span {  
+   mix-blend-mode: darken;
+}
+body:not(.dark-mode) .runner{
+    color: #121212;
+}
+body:not(.dark-mode) .news-container a {
+    color: #f1ebebfe;
+
+}
+body:not(.dark-mode) .pmain ,
+body:not(.dark-mode) .p2 {
+    color: rgb(28, 28, 28);
+
+}
+body:not(.dark-mode) .nav-bar,
+body:not(.dark-mode) .nav-bar ul li a,
+body:not(.dark-mode) .nav-bar ul{
+    background-color: #edededf3;
+}
+
+.magic-shape {
+    position: fixed; /* Ensures it stays on the screen */
+    pointer-events: none;
+    animation: shape-animation 1.2s ease-out;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    z-index: 999999; /* SUPER HIGH z-index to be above everything */
+}
+
+/* Different shape styles */
+.magic-shape[data-shape="star"] {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.magic-shape[data-shape="circle"] {
+    border-radius: 50%;
+}
+
+.magic-shape[data-shape="heart"] {
+    clip-path: path("M24 4c-5-4-13 0-14 6-1-6-9-10-14-6-5 5-4 14 4 20 6 5 10 6 10 6s4-1 10-6c8-6 9-15 4-20z");
+}
+
+.magic-shape[data-shape="diamond"] {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+@keyframes shape-animation {
+    0% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3) rotate(30deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.8) rotate(60deg);
+        opacity: 0;
+    }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+    .magic-shape {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
     }
 }

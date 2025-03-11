@@ -4,6 +4,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
     <title>Global Updates</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body onload="getLocationWeather()" >
+<body  >
 
     <!-- HEADER -->
     <header>
@@ -29,6 +30,9 @@
                     <li><a href="index.html#sports-section" >Sports</a></li>
                     <li><a href="index.html#politics-section" >Politics</a></li>
                     <li><a href="#" id="contact-link">Contact</a></li>
+                    <div class="theme-switcher" onclick="toggleTheme()">
+                        <span class="material-icons" id="theme-icon">dark_mode</span>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -47,7 +51,7 @@
 
     <!-- BREAKING NEWS TICKER -->
     <section class="breaking-news">
-        <marquee>🚨 Breaking News: Major updates happening now! Stay tuned for live reports. 🚨</marquee>
+        <marquee class="runner">Breaking News: Major updates happening now! Stay tuned for live reports.</marquee>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -65,7 +69,7 @@
                 <h1>India vs. Pakistan: Champions Trophy Showdown
                 </h1>
 <span class="news-time">Published: February 23, 2025 | 02:45 PM</span>
-<p>India and Pakistan faced off in a high-stakes ICC Champions Trophy match today. Pakistan posted 241 runs, with Saud Shakeel scoring 62. India started strong, reaching 115/2 in 21 overs, with Virat Kohli anchoring the chase at 41*. The match remains intense as both teams push for victory in this classic rivalry. Stay tuned for the final outcome!</p>
+<p class="pmain">India and Pakistan faced off in a high-stakes ICC Champions Trophy match today. Pakistan posted 241 runs, with Saud Shakeel scoring 62. India started strong, reaching 115/2 in 21 overs, with Virat Kohli anchoring the chase at 41*. The match remains intense as both teams push for victory in this classic rivalry. Stay tuned for the final outcome!</p>
                 <div class="dots-container">
                     <span class="dot active" onclick="moveToSlide(0)"></span>
                     <span class="dot" onclick="moveToSlide(1)"></span>
@@ -82,19 +86,19 @@
         <div class="recommendation-list">
             <div href="index.html" class="recommendation">
                 <img src="X.png"  onerror="this.style.display='none';" alt="Image">
-                <p>Stock Market Surges Amid Economic Optimism</p>
+                <p class="p2">Stock Market Surges Amid Economic Optimism</p>
             </div>
             <div class="recommendation">
                 <img src="logo.jpg"  onerror="this.style.display='none';" alt="Image">
-                <p>AI Breakthroughs: What’s Coming Next in 2025</p>
+                <p class="p2">AI Breakthroughs: What’s Coming Next in 2025</p>
             </div>
             <div class="recommendation">
                 <img src="logo.jpg"  onerror="this.style.display='none';" alt="Image">
-                <p>Tech Giants Invest Billions in Renewable Energy</p>
+                <p class="p2">Tech Giants Invest Billions in Renewable Energy</p>
             </div>
             <div class="recommendation">
                 <img src="logo.jpg"  onerror="this.style.display='none';" alt="Image">
-                <p>Tech Giants Invest Billions in Renewable Energy</p>
+                <p class="p2">Tech Giants Invest Billions in Renewable Energy</p>
             </div>
            
         </div>
@@ -318,10 +322,10 @@
         <div class="footer-section">
             <h3>Follow Us</h3>
             <div class="social-icons">
-                <a href="#"><img src="FB.png" alt="Facebook"></a>
-                <a href="#"><img src="X.png" alt="Twitter"></a>
-                <a href="#"><img src="YT.png" alt="YouTube"></a>
-                <a href="#"><img src="IN.png" alt="Instagram"></a>
+                <a href="facebook-link"><img src="FB.png" alt="Facebook"></a>
+                    <a href="Twitter-link"><img src="X.png" alt="Twitter"></a>
+                    <a href="Youtube-link"><img src="YT.png" alt="YouTube"></a>
+                    <a href="Instagram-link"><img src="IN.png" alt="Instagram"></a>
             </div>
         </div>
 

@@ -27,14 +27,19 @@
             <div class="logo">Global <span> Updates</span></div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#" class="scroll-link" data-section="Entertainment-section">Entertainment</a></li>
                     <li><a href="#" class="scroll-link" data-section="sports-section">Sports</a></li>
                     <li><a href="#" class="scroll-link" data-section="politics-section">Politics</a></li>
                     <li><a href="#" id="contact-link">Contact</a></li>
+                    <div class="theme-switcher" onclick="toggleTheme()">
+                        <span class="material-icons" id="theme-icon">dark_mode</span>
+                    </div>
+                    
                 </ul>
+               
             </nav>
-        </div>
+           
         <div id="header-nav" class="nav-bar">
             <ul>
                 <li><a href="#" class="scroll-link" data-section="Trending-section">Trending</a></li>
@@ -50,7 +55,7 @@
 
     <!-- BREAKING NEWS TICKER -->
     <section class="breaking-news">
-        <marquee>🚨 Breaking News: Major updates happening now! Stay tuned for live reports. 🚨</marquee>
+        <marquee class="runner"> Breaking News: Major updates happening now! Stay tuned for live reports. </marquee>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -59,7 +64,7 @@
             <h1>Top News</h1>
         </div>
         <section id="Top-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card" >
                 <img src="T101.png" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>India vs. Pakistan: Champions Trophy Showdown</h2>
@@ -71,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -80,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -89,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -98,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -107,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -116,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -124,7 +129,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -133,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -148,7 +153,7 @@
             <h1>Trending</h1>
         </div>
         <section id="Trending-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -157,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -166,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -175,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -184,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -193,7 +198,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -202,7 +207,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -210,7 +215,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -219,7 +224,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -234,7 +239,7 @@
             <h1>Sports</h1>
         </div>
         <section id="sports-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -243,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -252,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -261,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -270,7 +275,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -279,7 +284,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -288,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -296,7 +301,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -305,7 +310,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -320,7 +325,7 @@
             <h1>Entertainment</h1>
         </div>
         <section id="Entertainment-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -329,7 +334,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -338,7 +343,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -347,7 +352,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -356,7 +361,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -365,7 +370,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -374,7 +379,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -382,7 +387,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -391,7 +396,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -406,7 +411,7 @@
             <h1>World</h1>
         </div>
         <section id="World-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -415,7 +420,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -424,7 +429,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -433,7 +438,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -442,7 +447,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -451,7 +456,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -460,7 +465,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -468,7 +473,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -477,7 +482,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -492,7 +497,7 @@
             <h1>Politics</h1>
         </div>
         <section id="politics-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -501,7 +506,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -510,7 +515,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -519,7 +524,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -528,7 +533,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -537,7 +542,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -546,7 +551,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -554,7 +559,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -563,7 +568,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -578,7 +583,7 @@
             <h1>Education</h1>
         </div>
         <section id="Education-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -587,7 +592,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -596,7 +601,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -605,7 +610,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -614,7 +619,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -623,7 +628,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -632,7 +637,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -640,7 +645,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -649,7 +654,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -664,7 +669,7 @@
             <h1>Astrology</h1>
         </div>
         <section id="Astrology-section" class="news-container">
-            <div class="news-card" style="--hover-color:#FFD700">
+            <div class="news-card"    >
                 <img src="logo.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Breaking News: Market Hits Record High</h2>
@@ -673,7 +678,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#1E90FF">
+            <div class="news-card"  >
                 <img src="news2.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Tech: AI Revolutionizing Healthcare</h2>
@@ -682,7 +687,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#32CD32">
+            <div class="news-card"   >
                 <img src="news3.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Sports: Epic Showdown in Football Finals</h2>
@@ -691,7 +696,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF4500">
+            <div class="news-card"    >
                 <img src="news4.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Entertainment: New Movie Breaks Records</h2>
@@ -700,7 +705,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#FF1493">
+            <div class="news-card"    >
                 <img src="news5.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Health: New Diet Trends for 2025</h2>
@@ -709,7 +714,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#00FFFF">
+            <div class="news-card"    >
                 <img src="news6.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Science: NASA’s New Space Mission</h2>
@@ -718,7 +723,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#8A2BE2">
+            <div class="news-card"    >
                 <img src="news7.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Business: Startup Boom in 2025</h2>
@@ -726,7 +731,7 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="news-card" style="--hover-color:#FF8C00">
+            <div class="news-card"    >
                 <img src="news8.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Travel: Top Destinations for 2025</h2>
@@ -735,7 +740,7 @@
                 </div>
             </div>
 
-            <div class="news-card" style="--hover-color:#DC143C">
+            <div class="news-card"    >
                 <img src="news9.jpg" onerror="this.style.display='none';" alt="Image">
                 <div class="news-content">
                     <h2>Finance: Cryptocurrency Trends</h2>
@@ -768,31 +773,31 @@
 
                 <div class="weather-container">
                     <div class="weather-box"><span class="material-icons">thermostat</span>
-                        <p><b>Temperature:</b> <span id="temperature"></span>°C</p>
+                        <p class="result"><b>Temperature:</b> <span id="temperature"></span>°C</p>
                     </div>
                     <div class="weather-box"><span class="material-icons">device_thermostat</span>
-                        <p><b>Real Feel:</b> <span id="feels_like"></span>°C</p>
+                        <p class="result"><b>Real Feel:</b> <span id="feels_like"></span>°C</p>
                     </div>
                     <div class="weather-box"><span class="material-icons">air</span>
-                        <p><b>Wind Speed:</b> <span id="wind"></span> km/h</p>
+                        <p class="result"><b>Wind Speed:</b> <span id="wind"></span> km/h</p>
                     </div>
                     <div class="weather-box"><span class="material-icons">water_drop</span>
-                        <p><b>Humidity:</b> <span id="humidity"></span>%</p>
+                        <p class="result"><b>Humidity:</b> <span id="humidity"></span>%</p>
                     </div>
                     <div class="weather-box"><span class="material-icons">speed</span>
-                        <p><b>Pressure:</b> <span id="pressure"></span> hPa</p>
+                        <p class="result"><b>Pressure:</b> <span id="pressure"></span> Pa</p>
                     </div>
                     <div class="weather-box"><span class="material-icons">eco</span>
-                        <p><b>Air Quality:</b> <span id="aqi"></span></p>
+                        <p class="result"><b>Air Quality:</b> <span id="aqi"></span></p>
                     </div>
                     <div class="weather-box"><span class="material-icons">wb_sunny</span>
-                        <p><b>UV Index:</b> <span id="uv"></span></p>
+                        <p class="result"><b>UV Index:</b> <span id="uv"></span></p>
                     </div>
                     <div class="weather-box"><span class="material-icons">wb_twilight</span>
-                        <p><b>Sunrise:</b> <span id="sunrise"></span></p>
+                        <p class="result"><b>Sunrise:</b> <span id="sunrise"></span></p>
                     </div>
                     <div class="weather-box"><span class="material-icons">nights_stay</span>
-                        <p><b>Sunset:</b> <span id="sunset"></span></p>
+                        <p class="result"><b>Sunset:</b> <span id="sunset"></span></p>
                     </div>
                 </div>
 
@@ -830,10 +835,10 @@
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-icons">
-                    <a href="#"><img src="FB.png" alt="Facebook"></a>
-                    <a href="#"><img src="X.png" alt="Twitter"></a>
-                    <a href="#"><img src="YT.png" alt="YouTube"></a>
-                    <a href="#"><img src="IN.png" alt="Instagram"></a>
+                    <a href="facebook-link"><img src="FB.png" alt="Facebook"></a>
+                    <a href="Twitter-link"><img src="X.png" alt="Twitter"></a>
+                    <a href="Youtube-link"><img src="YT.png" alt="YouTube"></a>
+                    <a href="Instagram-link"><img src="IN.png" alt="Instagram"></a>
                 </div>
             </div>
 
@@ -863,7 +868,7 @@
                     Conditions</a></p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
