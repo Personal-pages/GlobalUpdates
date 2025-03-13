@@ -155,10 +155,11 @@
     justify-content: center;
 }
 
+/* Default: Light Mode (Dot is Dark) */
 .dot {
     width: 10px;
     height: 10px;
-    background: white;
+    background: black !important;  /* Dark in Light Mode */
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
                        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     display: inline-block;
@@ -167,12 +168,26 @@
     opacity: 0.6;
 }
 
-.dot.active {
-    background: white;
-    opacity: 1;
-    transform: scale(1.2);
+/* Dark Mode: Dot becomes Light */
+body.dark-mode .dot {
+    background: white !important;  /* Light in Dark Mode */
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
 }
+
+/* Active State */
+.dot.active {
+    background: black;  /* Default for active in light mode */
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode Active State */
+body.dark-mode .dot.active {
+    background: white;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+}
+
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {

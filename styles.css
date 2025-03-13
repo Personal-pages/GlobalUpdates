@@ -477,6 +477,7 @@ footer {
     margin: 0 auto; /* Centers the container */
     justify-content: center;
     padding-left: 8%;
+    position: relative;
 }
 /* News Card */
 .news-card {
@@ -486,6 +487,7 @@ footer {
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
 }
 
 .news-card img {
@@ -519,6 +521,8 @@ footer {
     font-weight: bold;
     border-radius: 5px;
     transition: background0.3s;
+    position: relative;
+    bottom: 0;
 }
 
 .news-content a:hover {
@@ -874,6 +878,7 @@ body:not(.dark-mode) .nav-bar ul{
     background-color: #edededf3;
 }
 
+
 .magic-shape {
     position: fixed; /* Ensures it stays on the screen */
     pointer-events: none;
@@ -920,3 +925,83 @@ body:not(.dark-mode) .nav-bar ul{
         filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
     }
 }
+
+
+/* Default Light Mode Button */
+.view-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white !important;
+    background: linear-gradient(135deg, #fd5f64, #ff8d6e);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none; /* Prevents accidental text selection */
+    touch-action: manipulation; /* Optimizes for mobile taps */
+}
+
+/* Hover and Tap Effects */
+.view-btn:hover,
+.view-btn:focus {
+    box-shadow: 0 0 15px rgba(253, 95, 100, 0.7);
+    filter: brightness(1.1);
+}
+
+.view-btn:active {
+    transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .view-btn {
+        position: relative;
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+}
+
+.main-news-header {
+    /* Keeps it at the top */
+   /* top: 140px; */
+    /* Fix to the top of the viewport */
+    top: 0px;
+   left: 0px;
+   margin: -10px -10px ;
+   width: 100%; /* Full width */
+    /* Dark background */
+   color: #fff; /* White text */
+   padding: 20px 35px;
+   z-index: 0; /* Layer above all other elements */
+   /* Shadow for separation */
+   overflow: hidden;
+   position: relative;
+ }
+ 
+ .main-news-header h1 {
+   font-size: 20px;
+   margin: 0;
+   font-weight: bold;
+   position: relative;
+   text-align: center;
+ }
+ 
+ .main-news-header h1::after {
+   content: '';
+   display: block;
+   width: 95%; /* Width of the orange underline */
+   height: 3px; /* Thickness of the underline */
+   background-color: #ff5722; /* Orange color */
+   margin-top: 8px;
+ }
+ 

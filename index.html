@@ -146,6 +146,9 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
+            <div>
+                <a href="top-news.html" class="view-btn">View All</a>
+            </div>
         </section>
     </main1>
     <main2>
@@ -231,6 +234,9 @@
                     <p>Experts predict the future of digital currencies in 2025...</p>
                     <a href="#">Read More</a>
                 </div>
+            </div>
+            <div>
+                <a href="Trending-news.html" class="view-btn">View All</a>
             </div>
         </section>
     </main2>
@@ -318,6 +324,9 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
+            <div>
+                <a href="Sports-news.html" class="view-btn">View All</a>
+            </div>
         </section>
     </main3>
     <main4>
@@ -403,6 +412,9 @@
                     <p>Experts predict the future of digital currencies in 2025...</p>
                     <a href="#">Read More</a>
                 </div>
+            </div>
+            <div>
+                <a href="Entertainment-news.html" class="view-btn">View All</a>
             </div>
         </section>
     </main4>
@@ -490,6 +502,9 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
+            <div>
+                <a href="World-news.html" class="view-btn">View All</a>
+            </div>
         </section>
     </main5>
     <main6>
@@ -575,6 +590,9 @@
                     <p>Experts predict the future of digital currencies in 2025...</p>
                     <a href="#">Read More</a>
                 </div>
+            </div>
+            <div>
+                <a href="Poltitics-news.html" class="view-btn">View All</a>
             </div>
         </section>
     </main6>
@@ -662,6 +680,9 @@
                     <a href="#">Read More</a>
                 </div>
             </div>
+            <div>
+                <a href="Educaation-news.html" class="view-btn">View All</a>
+            </div>
         </section>
     </main7>
     <main8>
@@ -747,6 +768,9 @@
                     <p>Experts predict the future of digital currencies in 2025...</p>
                     <a href="#">Read More</a>
                 </div>
+            </div>
+            <div>
+                <a href="Astrology-news.html" class="view-btn">View All</a>
             </div>
         </section>
     </main8>
@@ -868,7 +892,37 @@
                     Conditions</a></p>
         </div>
     </footer>
-    <script src="script.js" defer></script>
+    <script src="script.js" defer>
+           document.addEventListener("DOMContentLoaded", function () {
+            let cityInput = document.getElementById("city");
+            let searchBtn = document.getElementById("searchBtn");
+
+            // Listen for Enter key press
+            cityInput.addEventListener("keypress", function (event) {
+                console.log("Key pressed:", event.key); // Debugging
+                if (event.key === "Enter" || event.keyCode === 13) {
+                    event.preventDefault();
+                    getWeather();
+                }
+            });
+
+            // Listen for search button click
+            searchBtn.addEventListener("click", getWeather);
+        });
+
+        // Function to fetch weather (for now, just displays alert)
+        function getWeather() {
+            let city = document.getElementById("city").value.trim();
+            console.log("City input:", city); // Debugging
+
+            if (city !== "") {
+                alert("Fetching weather for: " + city);
+                // Here, you can add your API call logic
+            } else {
+                alert("Please enter a valid city or postal code.");
+            }
+        }
+    </script>
 </body>
 
 </html>
